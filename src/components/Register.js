@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { API_BASE_URL } from "../consts";
-import { UsernameAndPasswordForm } from "./UsernameAndPasswordForm";
+import { Signin } from "./Signin";
 import { useNavigate } from "react-router-dom";
 
 export function Register() {
@@ -23,7 +23,7 @@ export function Register() {
   return (
     <div>
       <h1>Register Page</h1>
-      <UsernameAndPasswordForm
+      <Signin
         submitButtonText={"Register!"}
         submitFormAction={register}
         passwordAutocomplete={"new-password"}

@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export function UsernameAndPasswordForm({
+export function Signin({
   submitFormAction,
-  submitButtonText,
-  passwordAutocomplete,
+  // submitButtonText,
+  // passwordAutocomplete,
   error = null,
 }) {
   const [formState, setFormState] = useState({ username: "", password: "" });
@@ -30,12 +30,12 @@ export function UsernameAndPasswordForm({
       <input
         type="password"
         name="password"
-        autoComplete={passwordAutocomplete}
+        // autoComplete={passwordAutocomplete}
         value={formState.password}
         onChange={handleFormState}
       />
-      {console.log(submitButtonText)}
-      <button type="submit">{submitButtonText}</button>
+      
+      <button type="submit">submit</button>
     </form>
   );
 }
