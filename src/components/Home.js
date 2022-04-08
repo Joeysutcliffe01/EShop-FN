@@ -50,8 +50,8 @@ export function Home() {
               return (
                 <div className="product__card" key={product._id}>
                   <Link to={`/product/${product._id}`}>
-                    <img src={product.Images} alt={product.Title} />
-                    <h3>{product.Title}</h3>
+                    <img src={product.imageUrl} alt={product.title} />
+                    <h3>{product.title}</h3>
                   </Link>
                 </div>
               );
