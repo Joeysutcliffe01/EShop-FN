@@ -47,6 +47,24 @@
   margin: 0.5rem;
 }
 
+/* ----------------------------------Homecards */
+
+.Product__slider__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product__card {
+  width: 30%;
+  /* border: 2px solid; */
+  padding: 0.5rem;
+}
+
+.product__card img {
+  width: 10rem;
+  height: 10rem;
+  /* border: 2px solid; */
+}
+
 .footer {
   display: flex;
   justify-content: center;
