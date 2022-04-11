@@ -47,6 +47,43 @@
   margin: 0.5rem;
 }
 
+/* ----------------------------------Containers */
+.container_col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* ----------------------------------Form */
+.form {
+  border: 2px solid #282c34;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: left;
+  margin: 2rem 0;
+}
+/* .form label,
+.form textarea {
+  text-align: left;
+} */
+.form input,
+.form textarea,
+.form label {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  /* color: red; */
+}
+
+.form input,
+.form textarea {
+  border-radius: 0.5rem;
+  width: 100%;
+  /* border: none; */
+  /* background-color: #ececec; */
+}
 /* ----------------------------------Homecards */
 
 .Product__slider__container {
@@ -57,6 +94,11 @@
   width: 30%;
   /* border: 2px solid; */
   padding: 0.5rem;
+}
+
+.product__card a {
+  text-decoration: none;
+  color: black;
 }
 
 .product__card img {

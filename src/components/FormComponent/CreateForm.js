@@ -17,6 +17,7 @@ function AddProduct(props) {
       price,
       imageUrl,
     };
+
     axios
       .post(`${API_BASE_URL}/products`, requestBody)
       .then((response) => {
@@ -33,15 +34,16 @@ function AddProduct(props) {
 
   return (
     <div className="AddProject">
-      <h3>Add Project</h3>
+      <h3>Add a item to sell</h3>
 
-      <form onSubmit={handleSubmit}>
+      <form className="form container_col" onSubmit={handleSubmit}>
         <label>Title:</label>
         <input
           type="text"
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          // placeholder="Enter the product name"
         />
 
         <label>Description:</label>
@@ -50,6 +52,7 @@ function AddProduct(props) {
           name="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          // placeholder="Enter the product description"
         />
         <label>Price:</label>
         <input
@@ -57,13 +60,15 @@ function AddProduct(props) {
           name="price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
+          // placeholder="Enter the product price"
         />
         <label>Image:</label>
-        <textarea
-          type="setImageUrl"
+        <input
+          type="text"
           name="image"
           value={imageUrl}
           onChange={(e) => setImageUrl(e.target.value)}
+          // placeholder="Enter the product image url"
         />
 
         <button type="submit">Submit</button>

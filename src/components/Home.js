@@ -2,10 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
-import AddProduct from "../components/FormComponent/CreateForm";
+// import AddProduct from "../components/FormComponent/CreateForm";
 
 export function Home() {
   const [products, setProducts] = useState();
+
   const getAllProducts = () => {
     axios
       .get(`${API_BASE_URL}/products`)
@@ -43,7 +44,7 @@ export function Home() {
         <div className="Product__slider__container">
           {/* <h1>The products should be under me</h1> */}
 
-          <AddProduct refreshProduct={getAllProducts} />
+          {/* <AddProduct refreshProduct={getAllProducts} /> */}
 
           {products ? (
             products.map((product) => {
