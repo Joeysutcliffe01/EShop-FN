@@ -68,7 +68,7 @@ export function ProductDetailPage() {
           <button className="addToCart_btn btn" onClick={handleAddToCart}>
             Add to cart
           </button>
-          <Cart />
+          
         </div>
       ) : (
         <p>Loading...</p>

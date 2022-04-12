@@ -6,6 +6,7 @@ import { AuthContext } from "../../context/AuthProviderWrapper";
 
 export function Cart() {
   const [cart, setCart] = useState(null);
+
   const { user } = useContext(AuthContext);
   
   // const [foundCart, setFoundCart] = useState(null);
@@ -17,28 +18,39 @@ let allCart = await axios.get(`${API_BASE_URL}/allcart/${user._id}`)
   }
   getCart()
 }, [user._id])
-  
-  console.log(user, "user id")
 
-  const handleDelete = () => {
-      axios.post(`${API_BASE_URL}/delete/`).then((response) => {
-        console.log(response.data);
-        // setFoundCart(response.data.product);
-      });
-    // console.log(response.data);
-  };
+const handleDelete = async (cart) => {
+  console.log(cart.title)
+  // try{
+  //     const response = await axios.delete(`${API_BASE_URL}/`, cart._id);
+  //     if(response.data.success){
+  //         alert(response.data.msg);
+  //     }
+  // }
+  // catch(err){
+  //     console.error(err);
+  // }
+}
   
-
   return (
     <div> <h1> cart</h1>
     {cart && cart.map((element,index) => {
       return (
+        <table>
+        <tr>  
         <div key={ element.title + index}> 
-        <h3> {element.title}</h3>
+        <td><h3> {element.title}</h3>  
+         <img src={element.imageUrl} alt={element.title} style={{width: "100px" , height: "100"}} /></td>
+        <td>${element.price}</td>
+        <td><button onClick={handleDelete}> deleteeeeeeeeeeeeeeeeeee</button></td>
+        
         </div>
+        </tr>
+        
+        </table>
       )
     } ) } 
-    <button onClick={handleDelete}> deleteeeeeeeeeeeeeeeeeee</button>
+    
     </div>
   )
   

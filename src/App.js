@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { getCsrfToken } from "./consts";
 import { Layout } from "./components/Layout";
 import { ProductDetailPage } from "./components/ProductDetailPage";
+import { Cart } from "./components/cartpage/Cart";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/product/:productId" element={<ProductDetailPage />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Custom404 />} />
         </Route>
       </Routes>
