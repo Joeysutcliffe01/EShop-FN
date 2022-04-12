@@ -1,24 +1,32 @@
 import axios from "axios";
-import React, { useEffect, useState, Link, useContext } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import React, { useEffect, useState, useContext } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
 import { AuthContext } from "../context/AuthProviderWrapper";
 
 export function ProductDetailPage() {
   const { productId } = useParams();
-  console.log("productId -->", productId);
+  const navigate = useNavigate();
+  // console.log("productId -->", productId);
 
-  const { user, removeUserFromContext } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
-  console.log(user, "this is the users data");
+  useEffect(() => {
+    console.log(user);
+    if (!user) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
 
-  const [foundProject, setFoundProject] = useState(null);
+  // console.log(user, "this is the users data");
+
+  const [foundProduct, setfoundProduct] = useState(null);
 
   useEffect(() => {
     // Get the project by id from the server
     axios.get(`${API_BASE_URL}/product/${productId}`).then((response) => {
       console.log(response.data);
-      setFoundProject(response.data.product);
+      setfoundProduct(response.data.product);
     });
   }, [productId]);
 
@@ -26,11 +34,11 @@ export function ProductDetailPage() {
     console.log("clicked user---------------", user);
 
     let currentProduct = {
-      title: foundProject.title,
-      imageUrl: foundProject.imageUrl,
-      description: foundProject.description,
-      price: foundProject.price,
-      productId: foundProject.productId,
+      title: foundProduct.title,
+      imageUrl: foundProduct.imageUrl,
+      description: foundProduct.description,
+      price: foundProduct.price,
+      productId: foundProduct.productId,
       owner: user._id,
     };
 
@@ -47,12 +55,12 @@ export function ProductDetailPage() {
 
   return (
     <div>
-      {foundProject ? (
+      {foundProduct ? (
         <div>
-          <h1>{foundProject.title}</h1>
-          <img src={foundProject.imageUrl} alt={foundProject.title} />
-          <p>$ {foundProject.price}</p>
-          <p>{foundProject.description}</p>
+          <h1>{foundProduct.title}</h1>
+          <img src={foundProduct.imageUrl} alt={foundProduct.title} />
+          <p>$ {foundProduct.price}</p>
+          <p>{foundProduct.description}</p>
 
           <button className="addToCart_btn btn" onClick={handleAddToCart}>
             Add to cart

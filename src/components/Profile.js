@@ -48,6 +48,7 @@ export function Profile() {
     <div className="main__container">
       <h1>Profile Page</h1>
       {user && <h2>Welcome, {user.username}</h2>}
+      <AddProduct />
       <button onClick={logout}>Logout</button>
     </div>
   );
