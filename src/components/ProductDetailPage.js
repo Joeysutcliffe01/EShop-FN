@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
 import { AuthContext } from "../context/AuthProviderWrapper";
+import { Cart } from "./cartpage/Cart";
 
 export function ProductDetailPage() {
   const { productId } = useParams();
@@ -65,9 +66,7 @@ export function ProductDetailPage() {
           <button className="addToCart_btn btn" onClick={handleAddToCart}>
             Add to cart
           </button>
-          {/* <button className="kibe_btn btn" onClick={handleAddToLikeList}>
-            Like me
-          </button> */}
+          {/* <Cart /> */}
         </div>
       ) : (
         <p>Loading...</p>

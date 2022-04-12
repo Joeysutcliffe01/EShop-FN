@@ -2,10 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
+import { Search } from "./Search";
 // import AddProduct from "../components/FormComponent/CreateForm";
 
 export function Home() {
   const [products, setProducts] = useState();
+  const [filterState, setFilterState] = useState('');
+
 
   const getAllProducts = () => {
     axios
@@ -25,6 +28,7 @@ export function Home() {
 
   return (
     <div className="main__container">
+    <Search filterState={filterState} setFilterState={setFilterState} />
       {/*---------------------------------------------- Hero  */}
       <section className="hero__section">
         <div className="Hero__container">
@@ -47,7 +51,13 @@ export function Home() {
           {/* <AddProduct refreshProduct={getAllProducts} /> */}
 
           {products ? (
-            products.map((product) => {
+            products.filter((product) => {
+          return product.title
+            .toLowerCase()
+            .trim()
+            .includes(filterState.toLowerCase().trim());
+        })
+            .map((product) => {
               return (
                 <div className="product__card" key={product._id}>
                   <Link to={`/product/${product._id}`}>
