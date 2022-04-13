@@ -21,6 +21,7 @@ export function Layout(logout) {
           <>
             <NavLink to="/profile">Profile</NavLink>
             <NavLink to="/cart">Cart</NavLink>
+            <NavLink to="/checkout">Checkout</NavLink>
           </>
         )}
       </nav>

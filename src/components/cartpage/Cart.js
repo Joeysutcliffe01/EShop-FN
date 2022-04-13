@@ -89,6 +89,9 @@ export function Cart() {
           );
         })}
       {total && <h1>Total:{total}</h1>}
+      <button className="btn_checkout">
+        <a href="/checkout">checkout</a>
+      </button>
     </div>
   );
 }

@@ -3,8 +3,8 @@ import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
 import { AuthContext } from "../context/AuthProviderWrapper";
-import { Cart } from "./cartpage/Cart";
-import AddProduct from "./FormComponent/CreateForm";
+// import { Cart } from "./cartpage/Cart";
+// import AddProduct from "./FormComponent/CreateForm";
 
 export function ProductDetailPage() {
   const { productId } = useParams();
@@ -12,7 +12,6 @@ export function ProductDetailPage() {
   // console.log("productId -->", productId);
 
   const { user } = useContext(AuthContext);
-
 
   useEffect(() => {
     console.log(user);
@@ -68,7 +67,6 @@ export function ProductDetailPage() {
           <button className="addToCart_btn btn" onClick={handleAddToCart}>
             Add to cart
           </button>
-          
         </div>
       ) : (
         <p>Loading...</p>

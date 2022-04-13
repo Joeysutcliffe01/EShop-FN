@@ -10,6 +10,7 @@ import { API_BASE_URL, getCsrfToken } from "./consts";
 import { Layout } from "./components/Layout";
 import { ProductDetailPage } from "./components/ProductDetailPage";
 import { Cart } from "./components/cartpage/Cart";
+import { CheckoutPage } from "./components/Payments/CheckoutPage";
 import axios from "axios";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           />
           <Route path="/product/:productId" element={<ProductDetailPage />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="*" element={<Custom404 />} />
         </Route>
       </Routes>
