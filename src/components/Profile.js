@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthProviderWrapper";
 import AddProduct from "./FormComponent/CreateForm";
 
 export function Profile({ currentUser }) {
-  const [products, setProducts] = useState();
+  
   const navigate = useNavigate();
   const { user, removeUserFromContext } = useContext(AuthContext);
 
@@ -17,21 +17,21 @@ export function Profile({ currentUser }) {
     }
   }, [user, navigate]);
 
-  useEffect(() => {
-    const getAllProducts = () => {
-      axios
-        .get(`${API_BASE_URL}/products`)
-        .then((response) => {
-          setProducts(response.data.products);
-          // console.log(response.data.products);
-        })
-        .catch((error) => console.log(error));
-    };
+  // useEffect(() => {
+  //   const getAllProducts = () => {
+  //     axios
+  //       .get(`${API_BASE_URL}/products`)
+  //       .then((response) => {
+  //         setProducts(response.data.products);
+  //         // console.log(response.data.products);
+  //       })
+  //       .catch((error) => console.log(error));
+  //   };
 
-    // console.log(products);
+  //   // console.log(products);
 
-    getAllProducts();
-  }, []);
+  //   getAllProducts();
+  // }, []);
 
   const logout = async () => {
     try {
