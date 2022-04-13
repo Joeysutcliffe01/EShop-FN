@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthProviderWrapper";
 import AddProduct from "./FormComponent/CreateForm";
 
-export function Profile() {
+export function Profile({ currentUser }) {
   const [products, setProducts] = useState();
   const navigate = useNavigate();
   const { user, removeUserFromContext } = useContext(AuthContext);
@@ -47,7 +47,7 @@ export function Profile() {
   return (
     <div className="main__container">
       <h1>Profile Page</h1>
-      {user && <h2>Welcome, {user.username}</h2>}
+      {currentUser && <h2>Welcome, {currentUser.username}</h2>}
       <AddProduct />
       <button onClick={logout}>Logout</button>
     </div>

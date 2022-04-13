@@ -6,21 +6,38 @@ import { AuthContext } from "../../context/AuthProviderWrapper";
 
 export function Cart() {
   const [cart, setCart] = useState(null);
-
+  const [total, setTotal] = useState(0);
   const { user } = useContext(AuthContext);
 
-  // const [foundCart, setFoundCart] = useState(null);
   useEffect(() => {
     async function getCart() {
       let allCart = await axios.get(`${API_BASE_URL}/allcart/${user._id}`);
-      console.log(allCart.data);
+
+      let filteredPrice = allCart.data.filterProduct;
+      let subTotal = filteredPrice.reduce((acc, cur) => {
+        return acc + Number(cur.price);
+      }, 0);
+
+      // console.log(subTotal, "sub price-----------++++++");
       setCart(allCart.data.filterProduct);
+      setTotal(subTotal);
     }
     getCart();
   }, [user._id]);
 
+  // useEffect(() => {
+  //   async function currentUserSession() {
+  //     let currentUser = await axios.get(`${API_BASE_URL}/user`);
+
+  //     if (currentUser === null) {
+  //       navigate("/login");
+  //     }
+  //   }
+  //   currentUserSession();
+  // }, [currentUser]);
+
   const handleDelete = async (itemToDelete) => {
-    console.log(itemToDelete);
+    // console.log(itemToDelete);
     try {
       const response = await axios.delete(`${API_BASE_URL}`, {
         data: {
@@ -63,7 +80,7 @@ export function Cart() {
                         handleDelete(element);
                       }}
                     >
-                      deleteeeeeeeeeeeeeeeeeee
+                      Remove
                     </button>
                   </td>
                 </div>
@@ -71,6 +88,7 @@ export function Cart() {
             </table>
           );
         })}
+      {total && <h1>Total:{total}</h1>}
     </div>
   );
 }
