@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
 import { Search } from "./Search";
+import "./styling/Home.css"
 // import AddProduct from "../components/FormComponent/CreateForm";
 
 export function Home() {
@@ -27,7 +28,12 @@ export function Home() {
   }, []);
 
   return (
-    <div className="main__container">
+    
+
+
+
+
+
     <Search filterState={filterState} setFilterState={setFilterState} />
       {/*---------------------------------------------- Hero  */}
       <section className="hero__section">
@@ -68,7 +74,7 @@ export function Home() {
               );
             })
           ) : (
-            <p> there is no f data</p>
+            <p> there is no data</p>
           )}
         </div>
 
