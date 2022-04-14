@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthProviderWrapper";
 import "./styling/Home.css";
+import "./styling/Footer.css";
 
 // add this in later to show and hide things, its the same as if user
 
@@ -57,7 +58,26 @@ export function Layout() {
 
       <Outlet />
       <footer className="footer">
-        <h1>I am a footer 🙂</h1>
+        <div className="footer__info">
+          {/* <div className="footer__left">
+            <NavLink className="logo__footer" to="/">
+              E<span>Shop</span>
+            </NavLink>
+          </div> */}
+          <div className="footer__right">
+            <h1>See more details</h1>
+            <p>
+              This Project has a similar consept as ebay, the goal is to help
+              customers buy and sell products as easy as possible
+            </p>
+            <NavLink className="item" to="/about">
+              About us
+            </NavLink>
+          </div>
+        </div>
+        <div className="footer__copyright">
+          <p>&#169; Eshop 2022, Created by Ali & Joey as an Ironhack project</p>
+        </div>
       </footer>
     </>
   );
