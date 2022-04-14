@@ -45,7 +45,7 @@ export function Layout() {
                   Checkout
                 </NavLink>
                 <button>
-                  <a href="#">Logout</a>
+                  <a href="logout">Logout</a>
                 </button>
               </>
             )}
