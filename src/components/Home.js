@@ -39,10 +39,10 @@ export function Home() {
             <div className="Hero__container">
               {/* <h1>Hero section goes here</h1> */}
               {/* <img src={heroImg} alt="Hero image" /> */}
-              <div class="wrapper-homepage">
-                <div class="static-txt">WELCOME TO ESHOP</div>
+              <div className="wrapper-homepage">
+                <div className="static-txt">WELCOME TO ESHOP</div>
                 <div>
-                  <ul class="dynamic-txts">
+                  <ul className="dynamic-txts">
                     <li>
                       <span>Discount Up to 50%</span>
                     </li>
