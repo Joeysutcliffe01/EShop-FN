@@ -37,7 +37,6 @@ export function Home() {
         <>
           <section className="hero__section">
             <div className="Hero__container">
-            
               {/* <h1>Hero section goes here</h1> */}
               {/* <img src={heroImg} alt="Hero image" /> */}
               <div className="wrapper-homepage">
@@ -128,9 +127,8 @@ export function Home() {
         </>
       ) : (
         <>
-        
           {/*---------------------------------------------- Product sliders  */}
-          <Search  filterState={filterState} setFilterState={setFilterState} />
+          <Search filterState={filterState} setFilterState={setFilterState} />
           <section className="Product__slider__section">
             <div className="Product__slider__container">
               {/* <h1>The products should be under me</h1> */}
@@ -151,6 +149,7 @@ export function Home() {
                         <Link to={`/product/${product._id}`}>
                           <img src={product.imageUrl} alt={product.title} />
                           <h3>{product.title}</h3>
+                          <h4>${product.price}</h4>
                         </Link>
                       </div>
                     );
@@ -172,6 +171,7 @@ export function Home() {
                   <h1>Product slider sections goes here</h1>
                 </div> */}
           </section>
+          <h1>All products</h1>
           <section className="Product__slider__section_2">
             <div className="Product__full__container_2">
               {/* <h1>The products should be under me</h1> */}
@@ -179,18 +179,17 @@ export function Home() {
               {/* <AddProduct refreshProduct={getAllProducts} /> */}
 
               {products ? (
-                products
-
-                  .map((product) => {
-                    return (
-                      <div className="product__card" key={product._id}>
-                        <Link to={`/product/${product._id}`}>
-                          <img src={product.imageUrl} alt={product.title} />
-                          <h3>{product.title}</h3>
-                        </Link>
-                      </div>
-                    );
-                  })
+                products.map((product) => {
+                  return (
+                    <div className="product__card" key={product._id}>
+                      <Link to={`/product/${product._id}`}>
+                        <img src={product.imageUrl} alt={product.title} />
+                        <h3>{product.title}</h3>
+                        <h4>${product.price}</h4>
+                      </Link>
+                    </div>
+                  );
+                })
               ) : (
                 <p> there is no data</p>
               )}

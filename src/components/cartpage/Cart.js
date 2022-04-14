@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { API_BASE_URL } from "../../consts";
 import { AuthContext } from "../../context/AuthProviderWrapper";
+import "../styling/Cart.css";
 
 export function Cart() {
   const [cart, setCart] = useState(null);
@@ -56,9 +57,9 @@ export function Cart() {
   };
 
   return (
-    <div>
+    <div className="cart__container">
       {" "}
-      <h1> cart</h1>
+      <h1>In Cart</h1>
       {cart &&
         cart.map((element, index) => {
           return (
@@ -66,16 +67,18 @@ export function Cart() {
               <tr>
                 <div key={element.title + index}>
                   <td>
-                    <h3> {element.title}</h3>
                     <img
+                      className="table__img"
                       src={element.imageUrl}
                       alt={element.title}
                       style={{ width: "100px", height: "100" }}
                     />
+                    <h3> {element.title}</h3>
                   </td>
                   <td>${element.price}</td>
                   <td>
                     <button
+                      className="cart__delete-btn"
                       onClick={() => {
                         handleDelete(element);
                       }}
@@ -90,7 +93,9 @@ export function Cart() {
         })}
       {total && <h1>Total:{total}</h1>}
       <button className="btn_checkout">
-        <a href="/checkout">checkout</a>
+        <a className="btn_checkout" href="/checkout">
+          checkout
+        </a>
       </button>
     </div>
   );

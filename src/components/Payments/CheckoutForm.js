@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { API_BASE_URL } from "../../consts";
+import "../styling/Checkout.css";
 
 export default function CheckoutForm() {
   const [succeeded, setSucceeded] = useState(false);

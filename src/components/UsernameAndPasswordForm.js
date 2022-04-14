@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styling/Form.css"
+import "./styling/Form.css";
 
 export function UsernameAndPasswordForm({
   submitFormAction,
@@ -19,7 +19,7 @@ export function UsernameAndPasswordForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={handleSubmit} className="form allForms">
       {error && <h2 style={{ color: "red" }}>{error.message}</h2>}
       <input
         type="text"
@@ -38,7 +38,9 @@ export function UsernameAndPasswordForm({
         placeholder="Password"
       />
       {console.log(submitButtonText)}
-      <button type="submit" className="btn-auth" >{submitButtonText}</button>
+      <button type="submit" className="btn-auth">
+        {submitButtonText}
+      </button>
     </form>
   );
 }

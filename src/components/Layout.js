@@ -23,9 +23,6 @@ export function Layout() {
           <ul class="menu-items">
             {!user ? (
               <>
-                <NavLink className="item" to="/about">
-                  About
-                </NavLink>
                 <NavLink className="item" to="/login">
                   Login
                 </NavLink>
@@ -44,11 +41,14 @@ export function Layout() {
                 <NavLink className="item" to="/checkout">
                   Checkout
                 </NavLink>
-                <button>
-                  <a href="logout">Logout</a>
-                </button>
+                {/* <button>
+                  <a href="#">Logout</a>
+                </button> */}
               </>
             )}
+            <NavLink className="item" to="/about">
+              About
+            </NavLink>
           </ul>
           <NavLink className="logo" to="/">
             E<span>Shop</span>
@@ -59,11 +59,11 @@ export function Layout() {
       <Outlet />
       <footer className="footer">
         <div className="footer__info">
-          {/* <div className="footer__left">
-            <NavLink className="logo__footer" to="/">
+          <div className="footer__left">
+            <NavLink className="logo" to="/">
               E<span>Shop</span>
             </NavLink>
-          </div> */}
+          </div>
           <div className="footer__right">
             <h1>See more details</h1>
             <p>
@@ -71,12 +71,12 @@ export function Layout() {
               customers buy and sell products as easy as possible
             </p>
             <NavLink className="item" to="/about">
-              About us
+              About
             </NavLink>
           </div>
         </div>
         <div className="footer__copyright">
-          <p>&#169; Eshop 2022, Created by Ali & Joey as an Ironhack project</p>
+          <p> &#169; Eshop, Created by Ali & Joey </p>
         </div>
       </footer>
     </>
