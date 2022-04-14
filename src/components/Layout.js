@@ -10,28 +10,41 @@ export function Layout(logout) {
 
   return (
     <>
-        <div className="main__container">
-<nav>
-	<input id="nav-toggle" type="checkbox">
-	<div className="logo">MINZ<strong>CODE</strong></div>
-	<ul class="links">
-		<li><a href="#home">Home</a></li>
-		<li><a href="#about">About</a></li>
-		<li><a href="#work">Work</a></li>
-		<li><a href="#projects">Projects</a></li>
-		<li><a href="#contact">Contact</a></li>
-	</ul>
-	<label for="nav-toggle" class="icon-burger">
-		<div className="line"></div>
-		<div className="line"></div>
-		<div className="line"></div>
-	</label>
-</nav>
+        <div className="navbar">
+          Saffron
+        <ul className="nav">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#services">Service</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <section className="banner-area" id="home"></section>
 
-<div className="container">
-	<img src="https://picsum.photos/id/559/1000/1000" alt="">
-	<img src="https://picsum.photos/id/558/1000/1000" alt="">
-</div>
+      <section className="about-area" id="about">
+        <div className="text-part"></div>
+      </section>
+
+      <section className="port-area" id="portfolio">
+        <div className="text-part"></div>
+      </section>
+
+      <section className="service-area" id="services">
+        <div className="text-part">
+          <h1>Services Area</h1>
+        </div>
+      </section>
       <nav className="nav">
         <NavLink to="/">EShop </NavLink>
 
