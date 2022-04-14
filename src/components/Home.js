@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthProviderWrapper";
 import { Search } from "./Search";
 import "./styling/Home.css";
-import heroImg from "./img/hero-img.jpg";
+
 // import AddProduct from "../components/FormComponent/CreateForm";
 
 export function Home() {
