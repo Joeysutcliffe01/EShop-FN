@@ -39,6 +39,15 @@ export function Home() {
             <div className="Hero__container">
               {/* <h1>Hero section goes here</h1> */}
               <img src={heroImg} alt="Hero image" />
+              <div class="wrapper-homepage">
+                    <div class="static-txt">WELCOME TO ESHOP</div>
+                    <ul class="dynamic-txts">
+                      <li><span>Discount Up to 50%</span></li>
+                      <li><span>until June</span></li>
+                      <li><span>Shop</span></li>
+                      <li><span>NOW</span></li>
+                    </ul>
+                  </div>
             </div>
           </section>
         </>

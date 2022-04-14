@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 body {
   padding: 0;
   margin: 0;
@@ -32,6 +32,7 @@ body {
 }
 
 .navbar {
+    z-index: 10;
   position: fixed;
   width: 100%;
   background: #24252a;
@@ -235,7 +236,7 @@ button:hover {
   border: 2px solid rgb(68, 255, 0);
 } */
 
-/*--------------------------------- Hero section */
+/*----------------------------------------------------------------------------- Hero section */
 .Hero__container {
   /* background-image: url(../../../public/images/svg/hero-svgs.png);
   background-size: auto;
@@ -244,7 +245,8 @@ button:hover {
   /* width: 100%;
   height: 100vh; */
   /* border: 2px solid red; */
-  padding-top: 2rem;
+ padding-top: 2rem;
+ position: relative;
 }
 .Hero__container img {
   /* background-image: url(../../../public/images/svg/hero-svgs.png);
@@ -299,3 +301,61 @@ button:hover {
   color: white;
   font-size: 1.3em;
 }
+
+
+/* automatic typing -------------------------------------------------------------------- */
+
+.wrapper-homepage{
+    position: absolute;
+    top: 42%;
+    left: 15%;
+    display: flex;
+  }
+  .wrapper-homepage .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+  }
+  .wrapper-homepage .dynamic-txts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+  }
+  .dynamic-txts li{
+    list-style: none;
+    color: #9edd0b;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+  }
+  @keyframes slide {
+    100%{
+      top: -360px;
+    }
+  }
+  .dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+  }
+  .dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent ;
+    border-left: 2px solid #c3fc6d;
+    animation: typing 3s steps(10) infinite;
+  }
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
