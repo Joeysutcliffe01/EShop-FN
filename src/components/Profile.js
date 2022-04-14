@@ -1,7 +1,7 @@
 import axios from "axios";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthProviderWrapper";
 import AddProduct from "./FormComponent/CreateForm";
 import "./styling/Profile.css";
@@ -9,6 +9,7 @@ import "./styling/Profile.css";
 export function Profile({ currentUser }) {
   const navigate = useNavigate();
   const { user, removeUserFromContext } = useContext(AuthContext);
+  const [formIsShown, setFormIsShown] = useState(false);
 
   useEffect(() => {
     console.log(user);
@@ -17,21 +18,9 @@ export function Profile({ currentUser }) {
     }
   }, [user, navigate]);
 
-  // useEffect(() => {
-  //   const getAllProducts = () => {
-  //     axios
-  //       .get(`${API_BASE_URL}/products`)
-  //       .then((response) => {
-  //         setProducts(response.data.products);
-  //         // console.log(response.data.products);
-  //       })
-  //       .catch((error) => console.log(error));
-  //   };
-
-  //   // console.log(products);
-
-  //   getAllProducts();
-  // }, []);
+  const toggleForm = () => {
+    setFormIsShown(!formIsShown);
+  };
 
   const logout = async () => {
     try {
@@ -47,18 +36,23 @@ export function Profile({ currentUser }) {
   return (
     <div className="main__container-profile">
       <div className="main__container-profile-inner">
-        <h1>Profile Page</h1>
-        {currentUser && <h2>Welcome, {currentUser.username}</h2>}
+        <div className="main__container-profile-inner-welcome">
+          {currentUser && <h2>Welcome, {currentUser.username}</h2>}
+          <p>Would you like to buy or sell something</p>
+        </div>
+
         <div className="profile__btn-container">
-          <NavLink className="profile__btn" to="/">
-            Buy
-          </NavLink>
-          <button className="profile__btn" onClick={logout}>
-            Logout
+          <button className="profile__btn">
+            <a href="/">Buy</a>
+          </button>
+          <button className="profile__btn sell" onClick={toggleForm}>
+            {formIsShown ? "Hide form" : "Sell"}
           </button>
         </div>
-        <AddProduct />
-        <button onClick={logout}>Logout</button>
+        {formIsShown && <AddProduct />}
+        <button className="logout__btn-profile" onClick={logout}>
+          Logout
+        </button>
       </div>
     </div>
   );

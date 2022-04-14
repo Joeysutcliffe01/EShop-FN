@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid rgb(98, 255, 0);
+  transition: 0.3 all ease-in-out;
+  /* border: 2px solid rgb(98, 255, 0); */
 }
 
 .main__container-profile-inner {
@@ -11,9 +12,19 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 2px solid rgb(242, 255, 0);
-  margin: 5rem 0 0 0;
-  width: 100%;
+  margin: 5rem 0;
+  width: 95%;
+  min-height: 80vh;
+  border-radius: 0.5rem;
+  border: 2px solid rgb(12, 27, 43);
+}
+
+.main__container-profile-inner-welcome {
+  padding: 1rem;
+  text-align: center;
+}
+.main__container-profile-inner-welcome p {
+  font-size: 1.3rem;
 }
 
 .AddProject {
@@ -21,12 +32,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 90%;
-  border: 2px solid rgb(30, 0, 255);
+  width: 100%;
+  padding: 2rem 0;
+  /* border: 2px solid rgb(30, 0, 255); */
 }
 
 .container_col {
-  border: 2px solid red;
+  width: 100%;
 }
 
 .profile__btn-container {
@@ -42,4 +54,28 @@
   font-size: 1.2em;
   color: white;
   padding: 0.5rem;
+  margin: 0 1rem;
+}
+.profile__btn .sell:hover {
+  color: white;
+  /* background-color: ; */
+}
+
+.profile__btn .sell {
+  padding: 3rem;
+}
+
+.logout__btn-profile {
+  width: 10rem;
+}
+
+@media (min-width: 768px) {
+  .container_col {
+    /* border: 2px solid red; */
+    width: 45rem;
+  }
+
+  .main__container-profile-inner {
+    width: 45rem;
+  }
 }

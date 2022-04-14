@@ -31,7 +31,7 @@ export function Home() {
   }, []);
 
   return (
-    <div className="main__container">
+    <div className="main__container-home ">
       {/*---------------------------------------------- Hero  */}
       {!user ? (
         <>
@@ -63,62 +63,60 @@ export function Home() {
 
           {/*---------------------------------------------- Filter btns  */}
           <section className="filter__btns__section">
-            <div className="Hero__container">
-              <div class="service">
-                <div className="title">
-                  <h2>Our Services</h2>
+            <div class="service">
+              <div className="title">
+                <h2>Our Services</h2>
+              </div>
+
+              <div className="box">
+                <div className="card">
+                  <i className="fas fa-bars"></i>
+                  <h5>Deliverys</h5>
+                  <div className="pra">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus doloremque corrupti minima ex laborum sequi?
+                    </p>
+
+                    <p>
+                      <a className="button" href="/some/valid/uri">
+                        Read More
+                      </a>
+                    </p>
+                  </div>
                 </div>
 
-                <div className="box">
-                  <div className="card">
-                    <i className="fas fa-bars"></i>
-                    <h5>Deliverys</h5>
-                    <div className="pra">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus doloremque corrupti minima ex laborum sequi?
-                      </p>
+                <div className="card">
+                  <i className="far fa-user"></i>
+                  <h5>Collections</h5>
+                  <div className="pra">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus doloremque corrupti minima ex laborum sequi?
+                    </p>
 
-                      <p>
-                        <a className="button" href="/some/valid/uri">
-                          Read More
-                        </a>
-                      </p>
-                    </div>
+                    <p>
+                      <a className="button" href="/some/valid/uri">
+                        Read More
+                      </a>
+                    </p>
                   </div>
+                </div>
 
-                  <div className="card">
-                    <i className="far fa-user"></i>
-                    <h5>Collections</h5>
-                    <div className="pra">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus doloremque corrupti minima ex laborum sequi?
-                      </p>
+                <div className="card">
+                  <i className="far fa-bell"></i>
+                  <h5>Sell</h5>
+                  <div className="pra">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus doloremque corrupti minima ex laborum sequi?.
+                    </p>
 
-                      <p>
-                        <a className="button" href="/some/valid/uri">
-                          Read More
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="card">
-                    <i className="far fa-bell"></i>
-                    <h5>Sell</h5>
-                    <div className="pra">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus doloremque corrupti minima ex laborum sequi?.
-                      </p>
-
-                      <p>
-                        <a className="button" href="/some/valid/uri">
-                          Read More
-                        </a>
-                      </p>
-                    </div>
+                    <p>
+                      <a className="button" href="/some/valid/uri">
+                        Read More
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
