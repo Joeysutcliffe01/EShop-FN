@@ -1,0 +1,45 @@
+.main__container-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(98, 255, 0);
+}
+
+.main__container-profile-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid rgb(242, 255, 0);
+  margin: 5rem 0 0 0;
+  width: 100%;
+}
+
+.AddProject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  border: 2px solid rgb(30, 0, 255);
+}
+
+.container_col {
+  border: 2px solid red;
+}
+
+.profile__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__btn {
+  background-color: rgb(23, 167, 193);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  padding: 0.5rem;
+}

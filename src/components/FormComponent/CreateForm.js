@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { API_BASE_URL } from "../../consts";
+import "../styling/Profile.css";
 
 function AddProduct(props) {
   const [title, setTitle] = useState("");

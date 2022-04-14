@@ -1,12 +1,12 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthProviderWrapper";
 import AddProduct from "./FormComponent/CreateForm";
+import "./styling/Profile.css";
 
 export function Profile({ currentUser }) {
-  
   const navigate = useNavigate();
   const { user, removeUserFromContext } = useContext(AuthContext);
 
@@ -45,11 +45,21 @@ export function Profile({ currentUser }) {
     }
   };
   return (
-    <div className="main__container">
-      <h1>Profile Page</h1>
-      {currentUser && <h2>Welcome, {currentUser.username}</h2>}
-      <AddProduct />
-      <button onClick={logout}>Logout</button>
+    <div className="main__container-profile">
+      <div className="main__container-profile-inner">
+        <h1>Profile Page</h1>
+        {currentUser && <h2>Welcome, {currentUser.username}</h2>}
+        <div className="profile__btn-container">
+          <NavLink className="profile__btn" to="/">
+            Buy
+          </NavLink>
+          <button className="profile__btn" onClick={logout}>
+            Logout
+          </button>
+        </div>
+        <AddProduct />
+        <button onClick={logout}>Logout</button>
+      </div>
     </div>
   );
 }
