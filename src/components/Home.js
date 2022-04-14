@@ -38,23 +38,25 @@ export function Home() {
           <section className="hero__section">
             <div className="Hero__container">
               {/* <h1>Hero section goes here</h1> */}
-              <img src={heroImg} alt="Hero image" />
+              {/* <img src={heroImg} alt="Hero image" /> */}
               <div class="wrapper-homepage">
                 <div class="static-txt">WELCOME TO ESHOP</div>
-                <ul class="dynamic-txts">
-                  <li>
-                    <span>Discount Up to 50%</span>
-                  </li>
-                  <li>
-                    <span>until June</span>
-                  </li>
-                  <li>
-                    <span>Shop</span>
-                  </li>
-                  <li>
-                    <span>NOW</span>
-                  </li>
-                </ul>
+                <div>
+                  <ul class="dynamic-txts">
+                    <li>
+                      <span>Discount Up to 50%</span>
+                    </li>
+                    <li>
+                      <span>until June</span>
+                    </li>
+                    <li>
+                      <span>Shop</span>
+                    </li>
+                    <li>
+                      <span>NOW</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
@@ -70,12 +72,11 @@ export function Home() {
                 <div className="box">
                   <div className="card">
                     <i className="fas fa-bars"></i>
-                    <h5>Web Development</h5>
+                    <h5>Deliverys</h5>
                     <div className="pra">
                       <p>
-                        Every website should be built with two primary goals:
-                        Firstly, it needs to work across all devices. Secondly,
-                        it needs to be fast as possible.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus doloremque corrupti minima ex laborum sequi?
                       </p>
 
                       <p>
@@ -88,12 +89,11 @@ export function Home() {
 
                   <div className="card">
                     <i className="far fa-user"></i>
-                    <h5>Web Development</h5>
+                    <h5>Collections</h5>
                     <div className="pra">
                       <p>
-                        Every website should be built with two primary goals:
-                        Firstly, it needs to work across all devices. Secondly,
-                        it needs to be fast as possible.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus doloremque corrupti minima ex laborum sequi?
                       </p>
 
                       <p>
@@ -106,12 +106,11 @@ export function Home() {
 
                   <div className="card">
                     <i className="far fa-bell"></i>
-                    <h5>Web Development</h5>
+                    <h5>Sell</h5>
                     <div className="pra">
                       <p>
-                        Every website should be built with two primary goals:
-                        Firstly, it needs to work across all devices. Secondly,
-                        it needs to be fast as possible.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus doloremque corrupti minima ex laborum sequi?.
                       </p>
 
                       <p>
