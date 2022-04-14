@@ -37,6 +37,7 @@ export function Home() {
         <>
           <section className="hero__section">
             <div className="Hero__container">
+            
               {/* <h1>Hero section goes here</h1> */}
               {/* <img src={heroImg} alt="Hero image" /> */}
               <div className="wrapper-homepage">
@@ -127,8 +128,9 @@ export function Home() {
         </>
       ) : (
         <>
+        
           {/*---------------------------------------------- Product sliders  */}
-          <Search filterState={filterState} setFilterState={setFilterState} />
+          <Search  filterState={filterState} setFilterState={setFilterState} />
           <section className="Product__slider__section">
             <div className="Product__slider__container">
               {/* <h1>The products should be under me</h1> */}
@@ -170,20 +172,15 @@ export function Home() {
                   <h1>Product slider sections goes here</h1>
                 </div> */}
           </section>
-          <section className="Product__slider__section">
-            <div className="Product__full__container">
+          <section className="Product__slider__section_2">
+            <div className="Product__full__container_2">
               {/* <h1>The products should be under me</h1> */}
 
               {/* <AddProduct refreshProduct={getAllProducts} /> */}
 
               {products ? (
                 products
-                  .filter((product) => {
-                    return product.title
-                      .toLowerCase()
-                      .trim()
-                      .includes(filterState.toLowerCase().trim());
-                  })
+
                   .map((product) => {
                     return (
                       <div className="product__card" key={product._id}>

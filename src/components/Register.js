@@ -3,6 +3,8 @@ import { useState } from "react";
 import { API_BASE_URL } from "../consts";
 import { UsernameAndPasswordForm } from "./UsernameAndPasswordForm";
 import { useNavigate } from "react-router-dom";
+import "./styling/Form.css"
+
 
 export function Register() {
   const [errorState, setErrorState] = useState();

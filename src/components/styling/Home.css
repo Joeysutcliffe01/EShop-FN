@@ -277,11 +277,37 @@ button:hover {
 
 /* ----------------------------------Homecards */
 
+.Product__slider__section{
+  display: flex;
+
+  border: 2px solid #9edd0b;
+  margin: 1rem 0;
+}
+.Product__slider__section_2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 90%;
+  border: 2px solid #ca59f7;
+  margin: 1rem 0;
+}
 .Product__slider__container {
   display: flex;
   /* flex-wrap: wrap; */
+  overflow:hidden;
   overflow-y: scroll;
   width: 80vw;
+  border: 2px solid #f9004d;
+
+}
+.Product__slider__container_2 {
+  display: flex;
+  /* flex-wrap: wrap; */
+  overflow:hidden;
+  overflow-y: scroll;
+  width: 80vw;
+  border: 2px solid #d19faf;
+
 }
 
 .Product__full__container {
@@ -289,10 +315,20 @@ button:hover {
   flex-wrap: wrap;
   width: 90vw;
 }
+.Product__full__container_2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+}
 .product__card {
-  width: 30%;
+  text-align: center;
+  width: 35%;
   /* border: 2px solid; */
   padding: 0.5rem;
+  border: 2px solid #24252a;
+  margin: 0.5rem;
 }
 
 .product__card a {
@@ -301,9 +337,14 @@ button:hover {
 }
 
 .product__card img {
-  width: 10rem;
-  height: 10rem;
+  border-radius: 0.4rem;
+  width: 5rem;
+  height: 5rem;
+  
   /* border: 2px solid; */
+}
+.product__card h3 {
+  font-size: 1em;
 }
 
 .footer {
@@ -444,4 +485,11 @@ h5 {
   background-color: transparent;
   border: 2px solid #f9004d;
   cursor: pointer;
+}
+
+.search{
+  border: #0088a9 solid 2px;
+  margin: 5rem 0 0 1rem;
+  min-width: 90%;
+  
 }

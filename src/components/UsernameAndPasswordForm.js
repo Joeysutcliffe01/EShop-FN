@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./styling/Form.css"
 
 export function UsernameAndPasswordForm({
   submitFormAction,
@@ -18,7 +19,7 @@ export function UsernameAndPasswordForm({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       {error && <h2 style={{ color: "red" }}>{error.message}</h2>}
       <input
         type="text"
@@ -26,6 +27,7 @@ export function UsernameAndPasswordForm({
         autoComplete="username"
         value={formState.username}
         onChange={handleFormState}
+        placeholder="Username"
       />
       <input
         type="password"
@@ -33,9 +35,10 @@ export function UsernameAndPasswordForm({
         autoComplete={passwordAutocomplete}
         value={formState.password}
         onChange={handleFormState}
+        placeholder="Password"
       />
       {console.log(submitButtonText)}
-      <button type="submit">{submitButtonText}</button>
+      <button type="submit" className="btn-auth" >{submitButtonText}</button>
     </form>
   );
 }

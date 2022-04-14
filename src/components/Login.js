@@ -4,6 +4,7 @@ import { API_BASE_URL, getCsrfToken } from "../consts";
 import { UsernameAndPasswordForm } from "./UsernameAndPasswordForm";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProviderWrapper";
+import "./styling/Form.css"
 
 export function Login() {
   const [errorState, setErrorState] = useState();
