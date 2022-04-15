@@ -16,7 +16,8 @@
   width: 95%;
   min-height: 80vh;
   border-radius: 0.5rem;
-  border: 2px solid rgb(12, 27, 43);
+  /* padding: 3rem; */
+  /* border: 2px solid rgb(164, 164, 164); */
 }
 
 .main__container-profile-inner-welcome {
@@ -71,7 +72,8 @@
 
 @media (min-width: 768px) {
   .container_col {
-    /* border: 2px solid red; */
+    /* border: 2px solid red;
+    margin: 0 3rem; */
     width: 45rem;
   }
 
