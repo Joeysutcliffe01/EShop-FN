@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
 import { AuthContext } from "../context/AuthProviderWrapper";
+import "./styling/ProductDetails.css";
 // import { Cart } from "./cartpage/Cart";
 // import AddProduct from "./FormComponent/CreateForm";
 
@@ -56,17 +57,23 @@ export function ProductDetailPage() {
   console.log(productId);
 
   return (
-    <div>
+    <div className="product__details-container">
       {foundProduct ? (
-        <div>
-          <h1>{foundProduct.title}</h1>
-          <img src={foundProduct.imageUrl} alt={foundProduct.title} />
-          <p>$ {foundProduct.price}</p>
-          <p>{foundProduct.description}</p>
+        <div className="product__details-container">
+          <div className="product__details-img-container">
+            <img src={foundProduct.imageUrl} alt={foundProduct.title} />
+          </div>
+          <div className="product__details-info-container">
+            <h1>{foundProduct.title}</h1>
+            <p className="product__details-info-price">
+              $ {foundProduct.price}
+            </p>
+            <p>{foundProduct.description}</p>
 
-          <button className="addToCart_btn btn" onClick={handleAddToCart}>
-            Add to cart
-          </button>
+            <button className="addToCart_btn btn" onClick={handleAddToCart}>
+              Add to cart
+            </button>
+          </div>
         </div>
       ) : (
         <p>Loading...</p>
