@@ -57,40 +57,44 @@ export function Cart() {
   };
 
   return (
-    <div className="cart__container">
+    <div className="cart__container-outer">
       {" "}
       <h1>In Cart</h1>
-      {cart &&
-        cart.map((element, index) => {
-          return (
-            <table>
-              <tr>
-                <div key={element.title + index}>
-                  <td>
-                    <img
-                      className="table__img"
-                      src={element.imageUrl}
-                      alt={element.title}
-                      style={{ width: "100px", height: "100" }}
-                    />
-                    <h3> {element.title}</h3>
-                  </td>
-                  <td>${element.price}</td>
-                  <td>
-                    <button
-                      className="cart__delete-btn"
-                      onClick={() => {
-                        handleDelete(element);
-                      }}
-                    >
-                      Remove
-                    </button>
-                  </td>
-                </div>
-              </tr>
-            </table>
-          );
-        })}
+      <div className="cart-container-inner">
+        {cart &&
+          cart.map((element, index) => {
+            return (
+              <div className="cart-cards-inner">
+                <table>
+                  <tr>
+                    <div key={element.title + index}>
+                      <td>
+                        <img
+                          className="table__img"
+                          src={element.imageUrl}
+                          alt={element.title}
+                          style={{ width: "100px", height: "100" }}
+                        />
+                        <h3> {element.title}</h3>
+                      </td>
+                      <td>${element.price}</td>
+                      <td>
+                        <button
+                          className="cart__delete-btn"
+                          onClick={() => {
+                            handleDelete(element);
+                          }}
+                        >
+                          Remove
+                        </button>
+                      </td>
+                    </div>
+                  </tr>
+                </table>
+              </div>
+            );
+          })}
+      </div>
       {total && <h1>Total:{total}</h1>}
       <button className="btn_checkout">
         <a className="btn_checkout" href="/checkout">

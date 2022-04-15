@@ -143,7 +143,7 @@ export function Home() {
                   })
                   .map((product) => {
                     return (
-                      <div className="product__card" key={product._id}>
+                      <div className="product__card-one" key={product._id}>
                         <Link to={`/product/${product._id}`}>
                           <img src={product.imageUrl} alt={product.title} />
                           <h3>{product.title}</h3>
