@@ -12,6 +12,7 @@ import { ProductDetailPage } from "./components/ProductDetailPage";
 import { Cart } from "./components/cartpage/Cart";
 import { CheckoutPage } from "./components/Payments/CheckoutPage";
 import axios from "axios";
+import { About } from "./components/About";
 
 function App() {
   const [userState, setUserState] = useState();
@@ -40,6 +41,7 @@ function App() {
           <Route path="/product/:productId" element={<ProductDetailPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<Custom404 />} />
         </Route>
       </Routes>
