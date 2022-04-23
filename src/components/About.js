@@ -1,7 +1,7 @@
 import "./styling/About.css";
-
 import ali from "./img/ali.jpg";
 import joey from "./img/about-me.jpg";
+import { FaGithub, FaLinkedin, FaPortrait } from "react-icons/fa";
 
 export function About() {
   return (
@@ -16,17 +16,32 @@ export function About() {
               Joey
               <br /> <span>Web Developer</span>{" "}
             </h2>
+            <p>JoeySutcliffe0@gmail.com</p>
             <ul className="social_icons-about">
-              <p>JoeySutcliffe0@gmail.com</p>
-              {/* <li>
-                <i className="fa-solid fa-at"></i>
+              <li>
+                <a
+                  className="github__link about__link"
+                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                >
+                  <FaGithub />
+                </a>
               </li>
               <li>
-                <i className="fa-brands fa-linkedin"></i>
+                <a
+                  className="linkedin__link about__link"
+                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                >
+                  <FaLinkedin />
+                </a>
               </li>
               <li>
-                <i className="fa-brands fa-github"></i>
-              </li> */}
+                <a
+                  className="portfolio__link about__link"
+                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                >
+                  <FaPortrait />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -42,17 +57,32 @@ export function About() {
               Ali
               <br /> <span>Web Developer</span>{" "}
             </h2>
+            <p>ali.amidpour.eng@gmail.com</p>
             <ul className="social_icons-about">
-              <p>ali.amidpour.eng@gmail.com</p>
-              {/* <li>
-                <i className="fa-solid fa-at"></i>
+              <li>
+                <a
+                  className="github__link about__link"
+                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                >
+                  <FaGithub />
+                </a>
               </li>
               <li>
-                <i className="fa-brands fa-linkedin"></i>
+                <a
+                  className="linkedin__link about__link"
+                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                >
+                  <FaLinkedin />
+                </a>
               </li>
               <li>
-                <i className="fa-brands fa-github"></i>
-              </li> */}
+                <a
+                  className="portfolio__link about__link"
+                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                >
+                  <FaPortrait />
+                </a>
+              </li>
             </ul>
           </div>
         </div>

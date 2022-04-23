@@ -7,7 +7,8 @@ import { AuthContext } from "../context/AuthProviderWrapper";
 import { Search } from "./Search";
 import "./styling/Home.css";
 
-// import AddProduct from "../components/FormComponent/CreateForm";
+//The  (npm i react-icons) way
+import { FaGrinStars, FaShoppingCart } from "react-icons/fa";
 
 export function Home() {
   const { user } = useContext(AuthContext);
@@ -147,7 +148,7 @@ export function Home() {
                         <Link to={`/product/${product._id}`}>
                           <img src={product.imageUrl} alt={product.title} />
                           <h3>{product.title}</h3>
-                          <h4>${product.price}</h4>
+                          <h4 className="product__price">${product.price}</h4>
                         </Link>
                       </div>
                     );
@@ -183,7 +184,13 @@ export function Home() {
                       <Link to={`/product/${product._id}`}>
                         <img src={product.imageUrl} alt={product.title} />
                         <h3>{product.title}</h3>
-                        <h4>${product.price}</h4>
+                        <h4 className="product__price-two">${product.price}</h4>
+                        <button className="product__addToCart-btn">
+                          <FaShoppingCart />
+                        </button>
+                        <button className="product__addTolike-btn">
+                          <FaGrinStars />
+                        </button>
                       </Link>
                     </div>
                   );
