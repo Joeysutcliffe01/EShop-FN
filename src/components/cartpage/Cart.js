@@ -26,17 +26,6 @@ export function Cart() {
     getCart();
   }, [user._id]);
 
-  // useEffect(() => {
-  //   async function currentUserSession() {
-  //     let currentUser = await axios.get(`${API_BASE_URL}/user`);
-
-  //     if (currentUser === null) {
-  //       navigate("/login");
-  //     }
-  //   }
-  //   currentUserSession();
-  // }, [currentUser]);
-
   const handleDelete = async (itemToDelete) => {
     // console.log(itemToDelete);
     try {
@@ -65,32 +54,26 @@ export function Cart() {
           cart.map((element, index) => {
             return (
               <div className="cart-cards-inner">
-                <table>
-                  <tr>
-                    <div key={element.title + index}>
-                      <td>
-                        <img
-                          className="table__img"
-                          src={element.imageUrl}
-                          alt={element.title}
-                          style={{ width: "100px", height: "100" }}
-                        />
-                        <h3> {element.title}</h3>
-                      </td>
-                      <td>${element.price}</td>
-                      <td>
-                        <button
-                          className="cart__delete-btn"
-                          onClick={() => {
-                            handleDelete(element);
-                          }}
-                        >
-                          Remove
-                        </button>
-                      </td>
-                    </div>
-                  </tr>
-                </table>
+                <div className="cart-cards" key={element.title + index}>
+                  <img
+                    className="cart__img"
+                    src={element.imageUrl}
+                    alt={element.title}
+                    style={{ width: "100px", height: "100" }}
+                  />
+                  <h3> {element.title}</h3>
+
+                  <h3>${element.price}</h3>
+
+                  <button
+                    className="cart__delete-btn"
+                    onClick={() => {
+                      handleDelete(element);
+                    }}
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
             );
           })}

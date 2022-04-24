@@ -7,60 +7,49 @@
   width: 100%;
   /* height: 80vh; */
   padding: 4rem 0;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
-.cart__container h1 {
-  padding: 1rem 0;
+.cart__container-outer h1 {
+  padding: 3rem 1rem 0 0;
+  /* color: yellow; */
   /* border: 2px solid rgb(0, 136, 255); */
 }
 
 .cart-container-inner {
-  /* display: flex; */
-  width: 100%;
-  border: 2px solid rgb(255, 213, 0);
+  padding: 3rem 0;
 }
 
 .cart-cards-inner {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  flex-direction: row;
-  border: 2px solid rgb(72, 255, 0);
+  padding: 0.5rem;
+  border-bottom: 2px solid rgb(203, 203, 203);
+  /* border: 2px solid rgb(72, 255, 0); */
 }
-.cart-cards-inner img {
-  border: 2px solid rgb(255, 0, 140);
+.cart__img {
+  /* width: 2000px;
+  border: 2px solid rgb(0, 255, 217); */
 }
 .cart-cards-inner h3 {
   width: min-content;
-  border: 2px solid rgb(0, 255, 217);
+  padding: 0.5rem;
+  /* border: 2px solid rgb(0, 255, 217); */
 }
 .cart-cards-inner h2 {
   width: min-content;
-  border: 2px solid rgb(0, 255, 217);
+  /* border: 2px solid rgb(0, 255, 217); */
 }
 .cart-cards-inner button {
   width: min-content;
-  border: 2px solid rgb(0, 255, 217);
+  /* border: 2px solid rgb(0, 255, 217); */
 }
 
-table,
-td {
+.cart-cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  border-radius: 0.5rem;
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid rgb(221, 221, 221);
-}
-
-table {
-  border: none;
-}
-.table__img {
-  width: 90%;
-  background-color: aquamarine;
 }
 
 .btn_checkout,
@@ -71,38 +60,14 @@ cart__delete-btn {
   text-align: center;
 }
 
-.cart-container {
-  /* border: 2px solid rgb(0, 136, 255); */
-  /* width: 90%; */
-}
-
-/* .cart__delete-btn {
-  background-color: rgb(23, 168, 194);
-  color: white;
-  text-align: center;
-} */
-
-/* .cart__delete-btn {
-  width: %;
-} */
-
 @media (min-width: 500px) {
-  /* .cart-container-inner {
-    display: flex;
+  .cart-cards {
     flex-direction: row;
-    justify-content: space-around;
-    width: 30rem;
-    border: 2px solid rgb(4, 255, 0);
-  } */
+  }
 
-  /* .cart-cards-inner {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin: 1rem 0;
-  } */
-
-  /* .main__container-profile-inner {
-    width: 45rem;ssss
-  } */
+  .cart-cards-inner h3 {
+    width: min-content;
+    padding: 2rem;
+    /* border: 2px solid rgb(0, 255, 217); */
+  }
 }

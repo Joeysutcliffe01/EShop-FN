@@ -1,7 +1,7 @@
 import "./styling/About.css";
 import ali from "./img/ali.jpg";
 import joey from "./img/about-me.jpg";
-import { FaGithub, FaLinkedin, FaPortrait } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMarker } from "react-icons/fa";
 
 export function About() {
   return (
@@ -21,7 +21,7 @@ export function About() {
               <li>
                 <a
                   className="github__link about__link"
-                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                  href="https://github.com/Joeysutcliffe01"
                 >
                   <FaGithub />
                 </a>
@@ -29,7 +29,7 @@ export function About() {
               <li>
                 <a
                   className="linkedin__link about__link"
-                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                  href="https://www.linkedin.com/in/joseph-sutcliffe-01/"
                 >
                   <FaLinkedin />
                 </a>
@@ -37,9 +37,9 @@ export function About() {
               <li>
                 <a
                   className="portfolio__link about__link"
-                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                  href="https://www.joeysutcliffe.com/"
                 >
-                  <FaPortrait />
+                  <FaMarker />
                 </a>
               </li>
             </ul>
@@ -62,7 +62,7 @@ export function About() {
               <li>
                 <a
                   className="github__link about__link"
-                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                  href="https://github.com/ali-nthtosay"
                 >
                   <FaGithub />
                 </a>
@@ -70,7 +70,7 @@ export function About() {
               <li>
                 <a
                   className="linkedin__link about__link"
-                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                  href="https://www.linkedin.com/in/ali-amidpour-4144911b4/"
                 >
                   <FaLinkedin />
                 </a>
@@ -78,9 +78,9 @@ export function About() {
               <li>
                 <a
                   className="portfolio__link about__link"
-                  href="https://www.youtube.com/watch?v=UUoZ_U2_4tA"
+                  href="https://github.com/ali-nthtosay"
                 >
-                  <FaPortrait />
+                  <FaMarker />
                 </a>
               </li>
             </ul>

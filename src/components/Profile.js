@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthProviderWrapper";
+import { Link } from "react-router-dom";
 import AddProduct from "./FormComponent/CreateForm";
 import "./styling/Profile.css";
 
@@ -42,9 +43,9 @@ export function Profile({ currentUser }) {
         </div>
 
         <div className="profile__btn-container">
-          <button className="profile__btn">
-            <a href="/">Buy</a>
-          </button>
+          <Link to="/" className="profile__btn-buy">
+            Buy
+          </Link>
           <button className="profile__btn sell" onClick={toggleForm}>
             {formIsShown ? "Hide form" : "Sell"}
           </button>

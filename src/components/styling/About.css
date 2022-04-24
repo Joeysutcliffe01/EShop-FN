@@ -15,8 +15,8 @@ border: 2px solid #1d3548;
 }
 .container-about .cards-about {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
   background: linear-gradient(
     #0cb3c5df,
     #0c85c7 20%,
@@ -77,6 +77,7 @@ border: 2px solid #1d3548;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  /* border: 2px solid red; */
 }
 .container-about .cards-about .content-about .details-about h2 {
   color: #fff;
@@ -113,9 +114,19 @@ border: 2px solid #1d3548;
 }
 .social_icons-about li a:hover {
   transform: rotate(360deg);
-  /* background: #f48803; */
+  color: #0a66c2;
+  background: #ffffff;
+}
+
+.social_icons-about .portfolio__link:hover {
+  color: #15ced8;
+}
+.social_icons-about .github__link:hover {
+  color: #212827;
 }
 
 .details-about p {
   color: white;
+  padding: 0.5rem 0;
+  cursor: pointer;
 }

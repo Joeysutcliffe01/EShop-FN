@@ -8,7 +8,7 @@ import { Search } from "./Search";
 import "./styling/Home.css";
 
 //The  (npm i react-icons) way
-import { FaGrinStars, FaShoppingCart } from "react-icons/fa";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
 
 export function Home() {
   const { user } = useContext(AuthContext);
@@ -80,7 +80,7 @@ export function Home() {
                     </p>
 
                     <p>
-                      <a className="button" href="/some/valid/uri">
+                      <a className="button" href="/login">
                         Read More
                       </a>
                     </p>
@@ -97,7 +97,7 @@ export function Home() {
                     </p>
 
                     <p>
-                      <a className="button" href="/some/valid/uri">
+                      <a className="button" href="/login">
                         Read More
                       </a>
                     </p>
@@ -114,7 +114,7 @@ export function Home() {
                     </p>
 
                     <p>
-                      <a className="button" href="/some/valid/uri">
+                      <a className="button" href="/login">
                         Read More
                       </a>
                     </p>
@@ -189,7 +189,7 @@ export function Home() {
                           <FaShoppingCart />
                         </button>
                         <button className="product__addTolike-btn">
-                          <FaGrinStars />
+                          <FaHeart />
                         </button>
                       </Link>
                     </div>
