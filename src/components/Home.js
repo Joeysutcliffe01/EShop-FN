@@ -14,7 +14,7 @@ export function Home() {
   const { user } = useContext(AuthContext);
   const [products, setProducts] = useState();
   const [filterState, setFilterState] = useState("");
-
+ console.log(API_BASE_URL)
   const getAllProducts = () => {
     axios
       .get(`${API_BASE_URL}/products`)
