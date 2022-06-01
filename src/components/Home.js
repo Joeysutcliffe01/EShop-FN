@@ -1,4 +1,7 @@
 import axios from "axios";
+import illastration from "./img/online-clothe-shopping.png";
+import wallet from "./img/wallet.png";
+import card from "./img/card.png";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { API_BASE_URL } from "../consts";
@@ -14,7 +17,7 @@ export function Home() {
   const { user } = useContext(AuthContext);
   const [products, setProducts] = useState();
   const [filterState, setFilterState] = useState("");
- console.log(API_BASE_URL)
+
   const getAllProducts = () => {
     axios
       .get(`${API_BASE_URL}/products`)
@@ -48,7 +51,7 @@ export function Home() {
                       <span>Discount Up to 50%</span>
                     </li>
                     <li>
-                      <span>until June</span>
+                      <span>until December</span>
                     </li>
                     <li>
                       <span>Shop</span>
@@ -58,6 +61,24 @@ export function Home() {
                     </li>
                   </ul>
                 </div>
+              </div>
+
+              <div className="hero_illastration">
+                <img
+                  className="hero_illastration-phone"
+                  src={illastration}
+                  alt="illastration"
+                />
+                <img
+                  className="hero_illastration-wallet vibrate-2"
+                  src={wallet}
+                  alt="wallet png"
+                />
+                <img
+                  className="hero_illastration-card vibrate-1"
+                  src={card}
+                  alt="card png"
+                />
               </div>
             </div>
           </section>
@@ -72,7 +93,7 @@ export function Home() {
               <div className="box">
                 <div className="card">
                   <i className="fas fa-bars"></i>
-                  <h5>Deliverys</h5>
+                  <h5>Deliveries</h5>
                   <div className="pra">
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
